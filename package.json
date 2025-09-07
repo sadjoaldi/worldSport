@@ -1,0 +1,26 @@
+{
+  "name": "worldsport",
+  "private": true,
+  "scripts": {
+    "start:frontend": "pnpm --filter frontend run start",
+    "start:backend": "pnpm --filter backend run start",
+    "frontend": "pnpm start:frontend",
+    "backend": "pnpm start:backend",
+    "dev": "pnpm --parallel --filter \"frontend\" --filter \"backend\" dev"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.11.0",
+    "@eslint/js": "^9.35.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "globals": "^16.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.42.0"
+  }
+}
