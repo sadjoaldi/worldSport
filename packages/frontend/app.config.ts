@@ -30,5 +30,13 @@ export default {
     extra: {
       API_URL: process.env.API_URL,
     },
+    plugins: [
+      [
+        "expo-router",
+        {
+          origin: process.env.APP_ORIGIN,
+        },
+      ],
+    ],
   },
 };
