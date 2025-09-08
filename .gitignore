@@ -1,14 +1,19 @@
-node_modules
-.expo
-dist
-web-build
-expo-env.d.ts
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
-.kotlIn
-*.orig.*
-*.jks
-*.p8
+# Ignorer les fichiers de configuration de l'IDE
+.vscode/
+.idea/
+
+# Ignorer les fichiers de dépendances
+node_modules/
+yarn.lock
+package-lock.json
+
+# Ignorer les fichiers de build
+dist/
+build/
+
+# Ignorer les fichiers temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers de cache
+.cache/
