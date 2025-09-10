@@ -1,6 +1,7 @@
 # Ignorer les fichiers de configuration de l'IDE
 .vscode/
 .idea/
+dist
 
 # Ignorer les fichiers de dépendances
 node_modules/
