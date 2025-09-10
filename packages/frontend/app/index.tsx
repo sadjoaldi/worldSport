@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <View>
-      <Text> you see the message {message}</Text>
+      <Text> now? {message}</Text>
     </View>
   );
 }
