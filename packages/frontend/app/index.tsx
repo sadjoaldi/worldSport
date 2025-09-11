@@ -1,23 +1,25 @@
-import axios from "axios";
+import { trpc } from "@/trpc";
+import { useQuery } from "@tanstack/react-query";
 import Constants from "expo-constants";
-import { useEffect, useState } from "react";
 
 import { Text, View } from "react-native";
 
 const apiUrl = Constants.expoConfig?.extra?.API_URL;
 
 export default function Home() {
-  const [message, setMessage] = useState<String>("");
+  const testTrpc = useQuery(trpc.test.hello.queryOptions());
 
-  useEffect(() => {
-    axios.get(`${apiUrl}/`).then((response) => {
-      setMessage(response.data);
-    });
-  }, []);
+  if (testTrpc.isLoading) {
+    return <Text>Loading...</Text>;
+  }
+
+  if (testTrpc.error) {
+    return <Text>Error: {testTrpc.error.message}</Text>;
+  }
 
   return (
     <View>
-      <Text> now? {message}</Text>
+      <Text> now {testTrpc.data?.message}</Text>
     </View>
   );
 }

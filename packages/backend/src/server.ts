@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import http from "node:http";
-import { appRouter } from "./trpc/routers/app-router";
+import { appRouter } from "./trpc/app-router";
 
 dotenv.config();
 // Initialize Express app
@@ -15,11 +15,10 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 3000;
 
 // CORS configuration
-const allowedOrigins: string[] = [
-  "http://localhost:3000",
-  "http://localhost:19006",
-  "http://localhost:19006",
-];
+const allowedOrigins: string[] = (process.env.ALLOWED_ORIGINS || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 const corsOptions: cors.CorsOptions = {
   origin: (
