@@ -2,6 +2,7 @@ import "dotenv/config";
 
 export default {
   expo: {
+    sdkVersion: "54.0.0",
     name: "frontend",
     slug: "frontend",
     version: "1.0.0",

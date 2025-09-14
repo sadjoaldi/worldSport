@@ -5,7 +5,9 @@ import { Stack } from "expo-router";
 export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Stack />
+      <Stack>
+        <Stack.Screen name="(tabs)" />
+      </Stack>
     </QueryClientProvider>
   );
 }

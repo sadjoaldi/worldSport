@@ -4,7 +4,7 @@ export const testRouter = router({
   // Queries are the best place to fetch data
   hello: publicProcedure.query(() => {
     return {
-      message: "hello world",
+      message: "hello worldsport app",
     };
   }),
 });
