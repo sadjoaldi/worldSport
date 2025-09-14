@@ -7,16 +7,16 @@ import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs initialRouteName="sports">
       <Tabs.Screen
         name="sports"
         options={{
           title: "Sports",
-          tabBarIcon: () => (
+          tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="soccer-field"
-              size={24}
-              color="black"
+              size={size}
+              color={color}
             />
           ),
         }}
@@ -25,15 +25,17 @@ export default function TabLayout() {
         name="championship"
         options={{
           title: "Championship",
-          tabBarIcon: () => <Octicons name="trophy" size={24} color="black" />,
+          tabBarIcon: ({ color, size }) => (
+            <Octicons name="trophy" size={size} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="live"
         options={{
           title: "Live",
-          tabBarIcon: () => (
-            <MaterialIcons name="live-tv" size={24} color="black" />
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="live-tv" size={size} color={color} />
           ),
         }}
       />
@@ -41,8 +43,8 @@ export default function TabLayout() {
         name="league"
         options={{
           title: "League",
-          tabBarIcon: () => (
-            <Ionicons name="football-outline" size={24} color="black" />
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="football-outline" size={size} color={color} />
           ),
         }}
       />
@@ -50,8 +52,8 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: () => (
-            <FontAwesome5 name="user" size={24} color="black" />
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="user" size={size} color={color} />
           ),
         }}
       />
