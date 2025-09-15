@@ -7,11 +7,13 @@ import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs initialRouteName="sports">
+    <Tabs initialRouteName="(sport)">
       <Tabs.Screen
-        name="sports"
+        name="(sport)"
         options={{
           title: "Sports",
+          headerShown: false,
+          popToTopOnBlur: true,
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="soccer-field"
