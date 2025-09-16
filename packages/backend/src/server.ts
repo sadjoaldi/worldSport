@@ -42,6 +42,16 @@ app.use(express.json());
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 
+// Logging middleware
+app.use((req, res, next) => {
+  console.log(
+    `[${new Date().toISOString()}] ${req.method} ${req.url} from ${
+      req.headers.origin
+    }`
+  );
+  next();
+});
+
 // tRPC endpoint
 app.use(
   "/api/trpc",
@@ -52,6 +62,6 @@ app.use(
 );
 
 // Start the server
-server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT} 🚀`);
+server.listen(Number(PORT), "0.0.0.0", () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT} 🚀`);
 });
