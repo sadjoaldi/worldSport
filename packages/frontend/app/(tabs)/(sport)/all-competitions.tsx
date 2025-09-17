@@ -4,6 +4,20 @@ export default function AllCompetitions() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
+      <Text style={styles.text}>All Competitions</Text>
     </View>
   );
 }
@@ -13,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f0f",
+    backgroundColor: "#222831",
   },
   text: {
     fontSize: 20,

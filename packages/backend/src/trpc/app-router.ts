@@ -1,8 +1,9 @@
+import { footballRouter } from "./routers/football-router";
 import { testRouter } from "./routers/test";
-import { publicProcedure, router } from "./trpc";
+import { router } from "./trpc";
 
 export const appRouter = router({
-  greeting: publicProcedure.query(() => "hello tRPC v10!"),
+  football: footballRouter,
   test: testRouter,
 });
 
